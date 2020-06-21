@@ -37,3 +37,11 @@ form input {
 ul {
     list-style: none;
 }
+
+.light-text {
+  color: #808080;
+}
+
+.red {
+  color: red;
+}

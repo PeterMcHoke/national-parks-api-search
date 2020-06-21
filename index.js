@@ -1,7 +1,7 @@
 'use strict';
 
 // put your own value below!
-const apiKey = '5tcZc0IjvHd315xZuc3tRWF02xpcFWslbOcgTmca'; 
+const apiKey = '5tcZc0IjvHd315xZuc3tRWF02xpcFWslbOcgTmca';
 const searchURL = 'https://developer.nps.gov/api/v1/parks';
 
 
@@ -17,8 +17,8 @@ function displayResults(responseJson, maxResults) {
   $('#results-list').empty();
   // iterate through the items array
   for (let i = 0; i < responseJson.data.length & i < maxResults; i++){
-    // for each video object in the items 
-    //array, add a list item to the results 
+    // for each video object in the items
+    //array, add a list item to the results
     //list with the video title, description,
     //and thumbnail
     $('#results-list').append(
@@ -27,11 +27,11 @@ function displayResults(responseJson, maxResults) {
       <img src='${responseJson.data[i].images[0].url}' alt='${responseJson.data[i].images[0].title}' width="200">
       </li><hr>`
     )};
-  //display the results section  
+  //display the results section
   $('#results').removeClass('hidden');
 };
 
-function getParks(query, stateCode='', maxResults=10) {
+function getParks(query='', stateCode='', maxResults=10) {
   const params = {
     q: query,
     stateCode: stateCode,

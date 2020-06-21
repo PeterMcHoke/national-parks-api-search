@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>YouTube video finder</title>
+    <title>National Parks Search</title>
     <link rel="shortcut icon" href="#">
     <link rel="stylesheet" href="index.css">
 </head>
@@ -13,13 +13,13 @@
         <h1>National Parks Vacation Planner</h1>
 
         <form id="js-form">
-            <label for="search-term">Search park:</label>
-            <input type="text" name="search-term" id="js-search-term" required>
+            <label for="park-state"><span class="red">*</span>State Code:</label><br>
+            <input type="text" name="park-state" id="js-park-state" placeholder="MT" required>
 
-            <label for="park-state">State Code: <sub>(Optional)</sub></label>
-            <input type="text" name="park-state" id="js-park-state" placeholder="WA">
+            <label for="search-term">Park name:</label>
+            <input type="text" name="search-term" id="js-search-term" optional>
 
-            <label for="max-results">Max number of results: </label>
+            <label for="max-results"><span class="red">*</span>Max number of results: </label>
             <input type="number" name="max-results" id="js-max-results" value="10">
 
             <input type="submit" value="Go!">
